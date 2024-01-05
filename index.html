@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Trang chủ</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <div class="slide-banner">
+        <div class="menu">
+            <label for="banner-1-th"></label>
+            <label for="banner-2-th"></label>
+            <label for="banner-3-th"></label>
+        </div>
+        <input id="banner-1-th" type="radio" name="slides" checked>
+            <div class="base-banner banner-1">
+                <img src="../assets/images/slider_1.jpg" alt="banner-home">
+            </div>
+        <input id="banner-2-th" type="radio" name="slides">
+            <div class="banner banner-2">
+                <img src="../assets/images/slider_2.jpg" alt="banner-home">
+            </div>
+        <input id="banner-3-th" type="radio" name="slides">
+            <div class="banner banner-3">
+                <img src="../assets/images/slider_3.jpg" alt="banner-home">
+            </div>
+    </div>
+    <section id="body">
+        <div class="favorite">
+            <p>Những thương hiệu được ưa chuộng nhất</p>
+        </div>
+        <div class="list-brand">
+            <div data-brand="Creed">
+                <img src="../assets/images/home/logo_creed.jpg" alt="Creed">
+            </div>
+            <div data-brand="Birkholz">
+                <img src="../assets/images/home/logo_birk.png" alt="Birkholz">
+            </div>
+            <div data-brand="Abercrombie & Fitch">
+                <img src="../assets/images/home/logo_a&f.jpg" alt="Abercrombie & Fitch">
+            </div>
+            <div data-brand="Versace">
+                <img src="../assets/images/home/logo_ver.png" alt="Versace">
+            </div>
+        </div>
+        <div class="favorite">
+            <p>Những mùi hương được ưa chuộng nhất</p>
+        </div>
+
+        <div class="list-fav">
+            <div data-scent="Aromatic">
+                <img src="../assets/images/Scent/thomngat.jpg" alt="Aromatic">
+                <p>Thơm ngát</p>
+            </div>
+            <div data-scent="Floral Fruity">
+                <img src="../assets/images/Scent/traicay.jpg" alt="Floral Fruity">
+                <p>Hoa cỏ trái cây</p>
+            </div>
+            <div data-scent="Citrus Aromatic">
+                <img src="../assets/images/Scent/camChanhThom.jpg" alt="Citrus Aromatic">
+                <p>Cam chanh thơm ngát</p>
+            </div>
+            <div data-scent="Floral Woody Musk">
+                <img src="../assets/images/Scent/xaHuong.jpg" alt="Floral Woody Musk">
+                <p>Hoa cỏ Gỗ xạ hương</p>
+            </div>
+            <div data-scent="Oriental Floral">
+                <img src="../assets/images/Scent/hoaCoPD.jpg" alt="Oriental Floral">
+                <p>Hoa cỏ phương Đông</p>
+            </div>
+            <div data-scent="Floral">
+                <img src="../assets/images/Scent/Hoaco.jpg" alt="Floral">
+                <p>Hoa cỏ</p>
+            </div>
+            <div data-scent="Chypre Floral">
+                <img src="../assets/images/Scent/hoaCoSip.jpg" alt="Chypre Floral">
+                <p>Hoa cỏ Síp</p>
+            </div>
+            <div data-scent="Aromatic Fougere">
+                <img src="../assets/images/Scent/duongxi.jpg" alt="Aromatic Fougere">
+                <p>Dương xỉ</p>
+            </div>
+        </div>
+        <div></div>
+        <div class="new-product">
+            <p>Hàng mới về</p>
+        </div>
+        <div class="n-product">
+        </div>
+        <div class="new-product-bt">
+            <button type="button" class="see-more"><a href="./store.html">Xem tất cả</a></button>
+        </div>
+        <div class="new-product">
+            <p>Tin tức nổi bật</p>
+        </div>
+        <section id="homeblog">
+            <ul class="blog-list-ul col2-by-mon">
+            </ul>
+        </section>
+        <div class="new-product-bt">
+            <button type="button" class="see-more"><a href="./blog.html">Xem thêm</a></button>
+        </div>
+    </section>
+    <hr>
+    <div id="footer-placeholder"></div>
+    <script src="../js/pageDefault/loadHeaderFooter.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/elasticlunr/elasticlunr.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+    <script type="module" src="../js/home.js"></script>
+    <script type="module" src="../js/store.js"></script>
+    <script type="module" src="../js/detail.js"></script>
+    <script type="module" src="../js/loadhome.js"></script>
+    <script type="module" src="../js/homeblog.js"></script>
+</body>
+</html>

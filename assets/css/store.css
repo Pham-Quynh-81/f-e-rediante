@@ -1,0 +1,765 @@
+
+.wrap_search{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding:20px 0;
+  background-color: #ffffff;
+  box-shadow: 0 0 5px rgb(166, 166, 166);
+
+}
+.container{
+  position: relative;
+}
+  .product{
+    padding:40px 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+  }
+ 
+  button.prev,button.next {
+    height:40px;
+    width:40px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    border-radius:50%;
+    border:none;
+    box-shadow: 2px 2px 5px rgb(129, 129, 129);
+  }
+  button.addIntoCart{
+    background-color:#2ea44f; ;
+    color:rgb(255, 255, 255);
+    font-size: 16px;
+    border:none;
+    padding:10px 10px;
+    box-shadow: 2px 2px 4px rgb(192, 192, 194);
+    margin:10px 0;
+    width:100%;
+  } 
+   button.addIntoCart:hover{
+   opacity: 0.7;
+
+  }
+  .perfume{
+    display: flex;
+    flex:none;
+    width:170px;
+   position:relative;
+   background-color:rgb(255, 255, 255);
+   justify-content: center;
+   flex-direction: column;
+   box-shadow: 2px 2px 3px rgb(182, 181, 181);
+   margin:15px 5px 0 5px;
+   transition: transform 0.5s ease;
+   cursor: pointer;
+  }
+  .perfume:hover{
+    box-shadow: 2px 2px 7px rgb(182, 181, 181);
+  }
+  .wrap_image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+  }
+  .wrap_image:hover .perfume_image{
+    transform: scale(1.4);
+  }
+  .wrap_image:hover::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  .perfume_image{
+    width:140px;
+    height:140px;
+    position: relative;
+    transition: transform 0.5s;
+    overflow: hidden;
+  }
+  .perfume_name{
+    color:black;
+    text-decoration: none!important;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    margin-top: 5px;
+    font-size: 14px;
+    overflow:hidden;
+    height:32px;
+    text-transform: uppercase;
+    padding:0 0 3px 0;
+    text-align: center;
+  }
+  .perfume_brand{
+    font-style: italic;
+    text-align: center;
+    margin: 10px 0;
+  }
+  .perfume_price{
+    font-weight: bold;
+    color:rgb(241, 47, 47);
+    text-align: center;
+    height:20px;
+  }
+  .old_price{
+    font-size: 14px;
+    text-decoration: line-through;
+    color:rgb(97, 97, 97);
+    font-weight: unset;
+    line-height: 20px;
+  }
+  .old_price h4{
+    font-size: 14px;
+    display: inline-block;
+    margin:0;
+    margin-left: 5px;
+    padding: 0;
+    color:rgb(255, 98, 0);
+    width:45px;
+  }
+  .new_price{
+    font-size: 14px;
+  }
+  .direction{
+    display:flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom:20px;
+  }
+  .search{
+    width:290px;
+    display:flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+  }
+  .searchItem{
+    padding: 0 10px;
+    margin:10px 0;
+    height:30px;
+    width:300px;
+    border-radius: 15px;
+    border:none;
+    box-shadow: 0 0 5px rgb(165, 165, 165);
+ 
+  }
+  .search .fa-magnifying-glass{
+    font-size: 20px;
+    position: absolute;
+    right:10px;
+    width:20px;
+  }
+  .wrap{
+   width:200px;
+  }
+  #clonedProduct{
+    transition:transform 0.8s ease;
+  }
+  .search .directionPage{
+    display:flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  .fa-gift{
+    font-size: 25px;
+    color:rgb(123, 255, 0)
+  }
+  .merchandise{
+   position: absolute;
+   top:30px;
+   left:1000px;
+  }
+.detailProduct{
+  position: absolute;
+  width:100px;
+  height:40px;
+  display: none;
+  border-radius: 10px;
+  padding:10px 10px;
+  z-index: 2;
+  border: none;
+  box-shadow: 2px 2px 2px rgb(98, 98, 98);
+  background-color: rgb(255, 255, 255);
+}
+.detailProduct:hover{
+  color:white;
+  background-color: rgb(237, 88, 14);
+}
+.wrap_image:hover .detailProduct{
+  display: block;
+}
+a.directPage{
+  position:absolute;
+  display: block;
+  width:100px;
+  height:40px;
+}
+button.filter{
+  background-color:#2ea44f;
+  color:white;
+  padding: 10px 15px;
+  border: none;
+  box-shadow:2px 2px 5px rgb(169, 169, 169) ;
+  margin:0 5px;
+  border-radius:5px;
+  height:40px;
+  width: 80px;
+}
+button.no_filter{
+  background-color: red;
+  color:white;
+  margin:0 5px;
+  border-radius:5px;
+  border: none;
+  box-shadow:2px 2px 5px rgb(169, 169, 169) ;
+  height:40px;
+  width: 80px;
+}
+.filter_block{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.filter:hover{
+  opacity: 0.8;
+}
+.no_filter:hover{
+  opacity: 0.8;
+}
+select{
+  padding:10px 0;
+  margin:5px 5px;
+  width:120px;
+  border: none;
+  box-shadow: 2px 2px 5px rgb(169, 169, 169);
+}
+.fa-chevron-up{
+    position: fixed;
+    width:33px;
+    border-radius: 50%;
+    background-color: white;
+    padding:2px;
+    right:50px;
+    z-index: 2;
+    bottom:300px;
+    font-size: 30px;
+    box-shadow: 0 0 5px rgb(191, 191, 191);
+
+}
+.fa-chevron-up:hover{
+    color: rgb(0, 21, 255);
+}
+@media (max-width:1024px){
+  .product{
+    padding:40px 0;
+  }
+}
+@media (max-width:768px){
+  .product{
+    padding:5px;
+  }
+}
+@media (max-width:520px){
+  .filter_block{
+    display:none;
+  }
+  .product{
+    padding:0;
+  }
+}
+
+.cdp_i.nextPage,.cdp_i.prevPage{
+  width:80px;
+}
+.cdp_i{
+  background-color:#2ea44f;
+  width:40px;
+}
+/*paginations
+*/
+
+@keyframes cdp-in {
+  from {
+    transform: scale(1.5);
+    opacity: 0; }
+  to {
+    transform: scale(1);
+    opacity: 1; } }
+
+.cdp {
+  position: relative;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0;
+  z-index: 6;
+  margin: 30px 0;
+  animation: cdp-in 500ms ease both; }
+  .cdp_i {
+    font-size: 14px;
+    text-decoration: none;
+    transition: background 250ms;
+    display: inline-block;
+    text-transform: uppercase;
+    margin: 0 3px 6px;
+    height: 38px;
+    min-width: 38px;
+    border-radius: 38px;
+    border: 2px solid #fff;
+    line-height: 38px;
+    padding: 0;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: .03em;
+    display: none; }
+    .cdp_i:first-child, .cdp_i:last-child {
+      padding: 0 16px;
+      margin: 0 12px 6px; }
+    .cdp_i:last-child, .cdp_i:nth-child(2), .cdp_i:nth-last-child(2) {
+      display: inline-block; }
+  .cdp_i:hover {
+    opacity: 0.8;
+    color: #fff; }
+  .cdp:not([actpage="1"]) .cdp_i:nth-child(1) {
+    display: inline-block; }
+
+.cdp[actpage="1"] .cdp_i:nth-child(-1):not(:first-child):not(:nth-child(2)) {
+  display: inline-block;
+  pointer-events: none;
+  color: transparent;
+  border-color: transparent;
+  width: 50px; }
+  .cdp[actpage="1"] .cdp_i:nth-child(-1):not(:first-child):not(:nth-child(2)):after {
+    content: '...';
+    color: #fff;
+    font-size: 32px;
+    margin-left: -6px; }
+
+.cdp[actpage="1"] .cdp_i:nth-child(0):not(:first-child) {
+  display: inline-block; }
+
+.cdp[actpage="1"] .cdp_i:nth-child(1):not(:first-child) {
+  display: inline-block; }
+
+.cdp[actpage="1"] .cdp_i:nth-child(2) {
+  background-color: #006420;
+  color: #fff;
+  display: inline-block; }
+  .cdp[actpage="1"] .cdp_i:nth-child(2) + .cdp_i:last-child {
+    display: none !important; }
+
+.cdp[actpage="1"] .cdp_i:nth-child(3):not(:last-child) {
+  display: inline-block; }
+
+.cdp[actpage="1"] .cdp_i:nth-child(4):not(:last-child) {
+  display: inline-block; }
+
+.cdp[actpage="1"] .cdp_i:nth-child(5):not(:last-child):not(:nth-last-child(2)) {
+  display: inline-block;
+  pointer-events: none;
+  color: transparent;
+  border-color: transparent;
+  width: 50px; }
+  .cdp[actpage="1"] .cdp_i:nth-child(5):not(:last-child):not(:nth-last-child(2)):after {
+    content: '...';
+    color: #fff;
+    font-size: 32px;
+    margin-left: -6px; }
+
+.cdp[actpage="2"] .cdp_i:nth-child(0):not(:first-child):not(:nth-child(2)) {
+  display: inline-block;
+  pointer-events: none;
+  color: transparent;
+  border-color: transparent;
+  width: 50px; }
+  .cdp[actpage="2"] .cdp_i:nth-child(0):not(:first-child):not(:nth-child(2)):after {
+    content: '...';
+    color: #fff;
+    font-size: 32px;
+    margin-left: -6px; }
+
+.cdp[actpage="2"] .cdp_i:nth-child(1):not(:first-child) {
+  display: inline-block; }
+
+.cdp[actpage="2"] .cdp_i:nth-child(2):not(:first-child) {
+  display: inline-block; }
+
+.cdp[actpage="2"] .cdp_i:nth-child(3) {
+  background-color: #006420;
+  color: #fff;
+  display: inline-block; }
+  .cdp[actpage="2"] .cdp_i:nth-child(3) + .cdp_i:last-child {
+    display: none !important; }
+
+.cdp[actpage="2"] .cdp_i:nth-child(4):not(:last-child) {
+  display: inline-block; }
+
+.cdp[actpage="2"] .cdp_i:nth-child(5):not(:last-child) {
+  display: inline-block; }
+
+.cdp[actpage="2"] .cdp_i:nth-child(6):not(:last-child):not(:nth-last-child(2)) {
+  display: inline-block;
+  pointer-events: none;
+  color: transparent;
+  border-color: transparent;
+  width: 50px; }
+  .cdp[actpage="2"] .cdp_i:nth-child(6):not(:last-child):not(:nth-last-child(2)):after {
+    content: '...';
+    color: #fff;
+    font-size: 32px;
+    margin-left: -6px; }
+
+.cdp[actpage="3"] .cdp_i:nth-child(1):not(:first-child):not(:nth-child(2)) {
+  display: inline-block;
+  pointer-events: none;
+  color: transparent;
+  border-color: transparent;
+  width: 50px; }
+  .cdp[actpage="3"] .cdp_i:nth-child(1):not(:first-child):not(:nth-child(2)):after {
+    content: '...';
+    color: #fff;
+    font-size: 32px;
+    margin-left: -6px; }
+
+.cdp[actpage="3"] .cdp_i:nth-child(2):not(:first-child) {
+  display: inline-block; }
+
+.cdp[actpage="3"] .cdp_i:nth-child(3):not(:first-child) {
+  display: inline-block; }
+
+.cdp[actpage="3"] .cdp_i:nth-child(4) {
+  background-color: #006420;
+  color: #fff;
+  display: inline-block; }
+  .cdp[actpage="3"] .cdp_i:nth-child(4) + .cdp_i:last-child {
+    display: none !important; }
+
+.cdp[actpage="3"] .cdp_i:nth-child(5):not(:last-child) {
+  display: inline-block; }
+
+.cdp[actpage="3"] .cdp_i:nth-child(6):not(:last-child) {
+  display: inline-block; }
+
+.cdp[actpage="3"] .cdp_i:nth-child(7):not(:last-child):not(:nth-last-child(2)) {
+  display: inline-block;
+  pointer-events: none;
+  color: transparent;
+  border-color: transparent;
+  width: 50px; }
+  .cdp[actpage="3"] .cdp_i:nth-child(7):not(:last-child):not(:nth-last-child(2)):after {
+    content: '...';
+    color: #fff;
+    font-size: 32px;
+    margin-left: -6px; }
+
+.cdp[actpage="4"] .cdp_i:nth-child(2):not(:first-child):not(:nth-child(2)) {
+  display: inline-block;
+  pointer-events: none;
+  color: transparent;
+  border-color: transparent;
+  width: 50px; }
+  .cdp[actpage="4"] .cdp_i:nth-child(2):not(:first-child):not(:nth-child(2)):after {
+    content: '...';
+    color: #fff;
+    font-size: 32px;
+    margin-left: -6px; }
+
+.cdp[actpage="4"] .cdp_i:nth-child(3):not(:first-child) {
+  display: inline-block; }
+
+.cdp[actpage="4"] .cdp_i:nth-child(4):not(:first-child) {
+  display: inline-block; }
+
+.cdp[actpage="4"] .cdp_i:nth-child(5) {
+  background-color: #006420;
+  color: #fff;
+  display: inline-block; }
+  .cdp[actpage="4"] .cdp_i:nth-child(5) + .cdp_i:last-child {
+    display: none !important; }
+
+.cdp[actpage="4"] .cdp_i:nth-child(6):not(:last-child) {
+  display: inline-block; }
+
+.cdp[actpage="4"] .cdp_i:nth-child(7):not(:last-child) {
+  display: inline-block; }
+
+.cdp[actpage="4"] .cdp_i:nth-child(8):not(:last-child):not(:nth-last-child(2)) {
+  display: inline-block;
+  pointer-events: none;
+  color: transparent;
+  border-color: transparent;
+  width: 50px; }
+  .cdp[actpage="4"] .cdp_i:nth-child(8):not(:last-child):not(:nth-last-child(2)):after {
+    content: '...';
+    color: #fff;
+    font-size: 32px;
+    margin-left: -6px; }
+
+.cdp[actpage="5"] .cdp_i:nth-child(3):not(:first-child):not(:nth-child(2)) {
+  display: inline-block;
+  pointer-events: none;
+  color: transparent;
+  border-color: transparent;
+  width: 50px; }
+  .cdp[actpage="5"] .cdp_i:nth-child(3):not(:first-child):not(:nth-child(2)):after {
+    content: '...';
+    color: #fff;
+    font-size: 32px;
+    margin-left: -6px; }
+
+.cdp[actpage="5"] .cdp_i:nth-child(4):not(:first-child) {
+  display: inline-block; }
+
+.cdp[actpage="5"] .cdp_i:nth-child(5):not(:first-child) {
+  display: inline-block; }
+
+.cdp[actpage="5"] .cdp_i:nth-child(6) {
+  background-color: #006420;
+  color: #fff;
+  display: inline-block; }
+  .cdp[actpage="5"] .cdp_i:nth-child(6) + .cdp_i:last-child {
+    display: none !important; }
+
+.cdp[actpage="5"] .cdp_i:nth-child(7):not(:last-child) {
+  display: inline-block; }
+
+.cdp[actpage="5"] .cdp_i:nth-child(8):not(:last-child) {
+  display: inline-block; }
+
+.cdp[actpage="5"] .cdp_i:nth-child(9):not(:last-child):not(:nth-last-child(2)) {
+  display: inline-block;
+  pointer-events: none;
+  color: transparent;
+  border-color: transparent;
+  width: 50px; }
+  .cdp[actpage="5"] .cdp_i:nth-child(9):not(:last-child):not(:nth-last-child(2)):after {
+    content: '...';
+    color: #fff;
+    font-size: 32px;
+    margin-left: -6px; }
+
+.cdp[actpage="6"] .cdp_i:nth-child(4):not(:first-child):not(:nth-child(2)) {
+  display: inline-block;
+  pointer-events: none;
+  color: transparent;
+  border-color: transparent;
+  width: 50px; }
+  .cdp[actpage="6"] .cdp_i:nth-child(4):not(:first-child):not(:nth-child(2)):after {
+    content: '...';
+    color: #fff;
+    font-size: 32px;
+    margin-left: -6px; }
+
+.cdp[actpage="6"] .cdp_i:nth-child(5):not(:first-child) {
+  display: inline-block; }
+
+.cdp[actpage="6"] .cdp_i:nth-child(6):not(:first-child) {
+  display: inline-block; }
+
+.cdp[actpage="6"] .cdp_i:nth-child(7) {
+  background-color: #006420;
+  color: #fff;
+  display: inline-block; }
+  .cdp[actpage="6"] .cdp_i:nth-child(7) + .cdp_i:last-child {
+    display: none !important; }
+
+.cdp[actpage="6"] .cdp_i:nth-child(8):not(:last-child) {
+  display: inline-block; }
+
+.cdp[actpage="6"] .cdp_i:nth-child(9):not(:last-child) {
+  display: inline-block; }
+
+.cdp[actpage="6"] .cdp_i:nth-child(10):not(:last-child):not(:nth-last-child(2)) {
+  display: inline-block;
+  pointer-events: none;
+  color: transparent;
+  border-color: transparent;
+  width: 50px; }
+  .cdp[actpage="6"] .cdp_i:nth-child(10):not(:last-child):not(:nth-last-child(2)):after {
+    content: '...';
+    color: #fff;
+    font-size: 32px;
+    margin-left: -6px; }
+
+.cdp[actpage="7"] .cdp_i:nth-child(5):not(:first-child):not(:nth-child(2)) {
+  display: inline-block;
+  pointer-events: none;
+  color: transparent;
+  border-color: transparent;
+  width: 50px; }
+  .cdp[actpage="7"] .cdp_i:nth-child(5):not(:first-child):not(:nth-child(2)):after {
+    content: '...';
+    color: #fff;
+    font-size: 32px;
+    margin-left: -6px; }
+
+.cdp[actpage="7"] .cdp_i:nth-child(6):not(:first-child) {
+  display: inline-block; }
+
+.cdp[actpage="7"] .cdp_i:nth-child(7):not(:first-child) {
+  display: inline-block; }
+
+.cdp[actpage="7"] .cdp_i:nth-child(8) {
+  background-color: #006420;
+  color: #fff;
+  display: inline-block; }
+  .cdp[actpage="7"] .cdp_i:nth-child(8) + .cdp_i:last-child {
+    display: none !important; }
+
+.cdp[actpage="7"] .cdp_i:nth-child(9):not(:last-child) {
+  display: inline-block; }
+
+.cdp[actpage="7"] .cdp_i:nth-child(10):not(:last-child) {
+  display: inline-block; }
+
+.cdp[actpage="7"] .cdp_i:nth-child(11):not(:last-child):not(:nth-last-child(2)) {
+  display: inline-block;
+  pointer-events: none;
+  color: transparent;
+  border-color: transparent;
+  width: 50px; }
+  .cdp[actpage="7"] .cdp_i:nth-child(11):not(:last-child):not(:nth-last-child(2)):after {
+    content: '...';
+    color: #fff;
+    font-size: 32px;
+    margin-left: -6px; }
+
+.cdp[actpage="8"] .cdp_i:nth-child(6):not(:first-child):not(:nth-child(2)) {
+  display: inline-block;
+  pointer-events: none;
+  color: transparent;
+  border-color: transparent;
+  width: 50px; }
+  .cdp[actpage="8"] .cdp_i:nth-child(6):not(:first-child):not(:nth-child(2)):after {
+    content: '...';
+    color: #fff;
+    font-size: 32px;
+    margin-left: -6px; }
+
+.cdp[actpage="8"] .cdp_i:nth-child(7):not(:first-child) {
+  display: inline-block; }
+
+.cdp[actpage="8"] .cdp_i:nth-child(8):not(:first-child) {
+  display: inline-block; }
+
+.cdp[actpage="8"] .cdp_i:nth-child(9) {
+  background-color: #006420;
+  color: #fff;
+  display: inline-block; }
+  .cdp[actpage="8"] .cdp_i:nth-child(9) + .cdp_i:last-child {
+    display: none !important; }
+
+.cdp[actpage="8"] .cdp_i:nth-child(10):not(:last-child) {
+  display: inline-block; }
+
+.cdp[actpage="8"] .cdp_i:nth-child(11):not(:last-child) {
+  display: inline-block; }
+
+.cdp[actpage="8"] .cdp_i:nth-child(12):not(:last-child):not(:nth-last-child(2)) {
+  display: inline-block;
+  pointer-events: none;
+  color: transparent;
+  border-color: transparent;
+  width: 50px; }
+  .cdp[actpage="8"] .cdp_i:nth-child(12):not(:last-child):not(:nth-last-child(2)):after {
+    content: '...';
+    color: #fff;
+    font-size: 32px;
+    margin-left: -6px; }
+
+.cdp[actpage="9"] .cdp_i:nth-child(7):not(:first-child):not(:nth-child(2)) {
+  display: inline-block;
+  pointer-events: none;
+  color: transparent;
+  border-color: transparent;
+  width: 50px; }
+  .cdp[actpage="9"] .cdp_i:nth-child(7):not(:first-child):not(:nth-child(2)):after {
+    content: '...';
+    color: #fff;
+    font-size: 32px;
+    margin-left: -6px; }
+
+.cdp[actpage="9"] .cdp_i:nth-child(8):not(:first-child) {
+  display: inline-block; }
+
+.cdp[actpage="9"] .cdp_i:nth-child(9):not(:first-child) {
+  display: inline-block; }
+
+.cdp[actpage="9"] .cdp_i:nth-child(10) {
+  background-color: #006420;
+  color: #fff;
+  display: inline-block; }
+  .cdp[actpage="9"] .cdp_i:nth-child(10) + .cdp_i:last-child {
+    display: none !important; }
+
+.cdp[actpage="9"] .cdp_i:nth-child(11):not(:last-child) {
+  display: inline-block; }
+
+.cdp[actpage="9"] .cdp_i:nth-child(12):not(:last-child) {
+  display: inline-block; }
+
+.cdp[actpage="9"] .cdp_i:nth-child(13):not(:last-child):not(:nth-last-child(2)) {
+  display: inline-block;
+  pointer-events: none;
+  color: transparent;
+  border-color: transparent;
+  width: 50px; }
+  .cdp[actpage="9"] .cdp_i:nth-child(13):not(:last-child):not(:nth-last-child(2)):after {
+    content: '...';
+    color: #fff;
+    font-size: 32px;
+    margin-left: -6px; }
+
+.cdp[actpage="10"] .cdp_i:nth-child(8):not(:first-child):not(:nth-child(2)) {
+  display: inline-block;
+  pointer-events: none;
+  color: transparent;
+  border-color: transparent;
+  width: 50px; }
+  .cdp[actpage="10"] .cdp_i:nth-child(8):not(:first-child):not(:nth-child(2)):after {
+    content: '...';
+    color: #fff;
+    font-size: 32px;
+    margin-left: -6px; }
+
+.cdp[actpage="10"] .cdp_i:nth-child(9):not(:first-child) {
+  display: inline-block; }
+
+.cdp[actpage="10"] .cdp_i:nth-child(10):not(:first-child) {
+  display: inline-block; }
+
+.cdp[actpage="10"] .cdp_i:nth-child(11) {
+  background-color: #006420;
+  color: #fff;
+  display: inline-block; }
+  .cdp[actpage="10"] .cdp_i:nth-child(11) + .cdp_i:last-child {
+    display: none !important; }
+
+.cdp[actpage="10"] .cdp_i:nth-child(12):not(:last-child) {
+  display: inline-block; }
+
+.cdp[actpage="10"] .cdp_i:nth-child(13):not(:last-child) {
+  display: inline-block; }
+
+.cdp[actpage="10"] .cdp_i:nth-child(14):not(:last-child):not(:nth-last-child(2)) {
+  display: inline-block;
+  pointer-events: none;
+  color: transparent;
+  border-color: transparent;
+  width: 50px; }
+  .cdp[actpage="10"] .cdp_i:nth-child(14):not(:last-child):not(:nth-last-child(2)):after {
+    content: '...';
+    color: #fff;
+    font-size: 32px;
+    margin-left: -6px; }

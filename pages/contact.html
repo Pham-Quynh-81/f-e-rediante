@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Liên hệ</title>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <section id="contact-body">
+        <div class="col col-half s-col-full">
+            <div class="info-location">
+                <p><i class="fa-solid fa-location-dot"></i>Đường Hàn Thuyên, khu phố 6 TP.Thủ Đức, Thành phố Hồ Chí Minh.</p>
+                <p><i class="fa-solid fa-mobile-screen-button"></i>0909092152</p>
+                <p><i class="fa-regular fa-envelope"></i>7RADIANTE@gmail.com</p>
+            </div>
+            <h2>Liên hệ với chúng tôi</h2>
+            <div class="contact-form">
+                <form onsubmit="sendContact(); reset(); return false;">
+                    <input type="text" id="cname" name="name" placeholder="Họ và tên" required class="form-control">
+                    <input type="email" id="cemail" name="email" placeholder="Email" required class="form-control">
+                    <input type="text" id="csubject" name="subject" placeholder="Chủ đề" required class="form-control">
+                    <textarea id="message" name="cmessage" placeholder="Nội dung" required class="form-control" ></textarea>
+                    <input class="btn-contact s-full-width" type="submit" value="Gửi liên hệ">
+                </form>
+            </div>
+        </div>
+        <div class="col col-half s-col-full contact-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15672.924961103905!2d106.8030541!3d10.8700089!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527587e9ad5bf%3A0xafa66f9c8be3c91!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBuZ2jhu4cgVGjDtG5nIHRpbiAtIMSQSFFHIFRQLkhDTQ!5e0!3m2!1svi!2s!4v1701350262969!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+    <section id="offer">
+        <div class="text">
+            <h4>Đăng ký bằng Email</h4>
+            <p>Đăng ký để nhận được những thông báo mới nhất và <span>những ưu đãi đặc biệt.</span></p>
+        </div>
+        <div class="form">
+            <input type="email" name="" class="email-signup" placeholder="Nhập mail của bạn" required id="">
+            <input onclick="sendEmail()" class="btn-offer" type="submit" value="Đăng ký">
+        </div>
+    </section>
+    <div id="footer-placeholder"></div>
+    </div>
+    <script src="../js/pageDefault/loadHeaderFooter.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="../js/sendContact.js"></script>
+    <script type="module" src="../js/home.js"></script>
+    <script type="module" src="../js/store.js"></script>
+</body>
+</html>

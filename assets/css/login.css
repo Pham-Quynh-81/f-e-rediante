@@ -1,0 +1,124 @@
+.welcome{
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    margin-top: 20px;
+}
+.welcome p:first-child{
+    font-size: 30px;
+    padding-bottom: 5px;
+}
+.welcome p:last-child{
+    font-size: 18px;
+}
+#wrapper{
+    min-height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+#wrapper input{
+    font-size: 15px;
+}
+#wrapper i{
+    width: 21px;
+}
+#form-login{
+    max-width: 500px;
+    background: rgba(248, 233, 214, 0.862);
+    float: right;
+    flex-grow: 1;
+    padding: 25px 25px 35px;
+    box-shadow: 0px 0px 17px 2px rgba(255, 255, 255, 0.8);
+}
+#form-login .form-heading{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    text-align: center;
+    margin-bottom: 25px;
+}
+#form-login .form-group{
+    position: relative;
+    border-bottom: 1px solid black;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    display: flex;
+}
+#form-login .form-group i{
+    color: black;
+    font-size: 15px;
+    padding-top: 5px;
+    padding-right: 10px;
+}
+#form-login .form-input{
+    background: transparent;
+    border: 0;
+    outline: 0;
+    color: black;
+    flex-grow: 1;
+}
+#form-login .form-input::placeholder{
+    color: black;
+}
+#rememberCheckbox {
+    width: auto;
+}
+#form-login .form-submit{
+    background: transparent;
+    border: 1px solid black;
+    color: black;
+    width: 100%;
+    text-transform: uppercase;
+    padding: 6px 10px;
+    transition: 0.25s ease-in-out;
+    margin-top: 30px;
+    border-radius: 25px;
+}
+#form-login .form-register{
+    background: transparent;
+    border: 1px solid black;
+    color: black;
+    font-size: 15px;
+    width: 100%;
+    text-transform: uppercase;
+    padding: 6px 10px;
+    transition: 0.25s ease-in-out;
+    margin-top: 5px;
+    border-radius: 25px;
+}
+#form-login .form-submit:hover{
+    border: 1px solid white;
+}
+#form-login .form-register:hover{
+    border: 1px solid white;
+}
+@media (max-width: 768px) {
+    .welcome{
+        margin-top: 5px 0;
+    }
+    .welcome p:first-child{
+        font-size: 20px;
+    }
+    .welcome p:last-child{
+        font-size: 15px;
+    }   
+    #wrapper{
+        min-height: 35vh;
+        margin-bottom: 10px;
+    }
+    #wrapper input{
+        font-size: 15px;
+    }
+    #form-login .form-heading{
+        font-size: 20px;
+    }
+    #form-login .form-register{
+        font-size: 15px;
+    }
+    #form-login .form-input::placeholder{
+        font-size: 14px;
+    }
+}
+
+  

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Thanh toán</title>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+        <div id="checkout">
+            <form id="needs-validation" method="" action="">
+                <div class="top-header">
+                    <i class="fa fa-credit-card fa-4x" aria-hidden="true"></i>
+                    <h2>Thanh toán</h2>
+                    <p>Vui lòng kiểm tra thông tin Khách hàng, thông tin Giỏ hàng trước khi Đặt hàng.</p>
+                </div>
+
+                <div class="row">
+                    <div class="cart-checkout">
+                        <h4 class="title">
+                            <span>Giỏ hàng</span>
+                            <div class="cart-amount">0</d>
+                        </h4>
+                        <ul class="product-list">
+                            
+                        </ul>
+                        <div class="total-amount">
+                            <div class="total-title">Tổng cộng</div>
+                            <div id="total-price" class="total-price">649,000 VND</div>
+                          </div>
+                    </div>
+                    <div class="detail-checkout">
+                        <h4 class="title">Thông tin khách hàng</h4>
+
+                        <div class="form-info">
+                        </div>
+
+                        <h4 class="title">Hình thức thanh toán</h4>
+
+                        <div class="payments">
+                            <div class="payment">
+                                <input id="httt-1" name="payment" type="radio" class="radio" required="" value="1" checked>
+                                <label class="custom-control-label" for="httt-1">Tiền mặt</label>
+                            </div>
+                            <div class="payment">
+                                <input id="httt-2" name="payment" type="radio" class="radio" required="" value="2">
+                                <label class="custom-control-label" for="httt-3">Ship COD</label>
+                            </div>
+                        </div>
+                        <button class="btn-checkout" type="submit">Đặt
+                            hàng</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div id="customPopup" class="popup">
+            <div class="popup-content">
+                <p id="popupMessage"></p>
+            </div>
+            <button class="close">X</button>
+    
+        </div> 
+    <div id="footer-placeholder"></div>
+    <script src="../js/pageDefault/loadHeaderFooter.js"></script>
+    <script type="module" src="../js/home.js"></script>
+    <script type="module" src="../js/store.js"></script>
+    <script type="module" src="../js/checkout.js"></script>
+</html>
